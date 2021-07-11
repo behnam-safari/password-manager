@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from page1 import *
 import random
+from os import getcwd
 #--------------------------------***this is add info backend***-------------------------------------------
 def add_info():
 
@@ -95,7 +96,7 @@ def pass_generator():
 #--------------------------------***front_end***------------------------------------------------------------------------------------
 win = Tk()
 win.geometry('620x400')
-img1 = PhotoImage(file = '/home/reza/Desktop/Untitled.png')
+img1 = PhotoImage(file =getcwd()+'/my-vector'+'/Untitled.png')
 frame_left = Frame(win,bg = '#ffffff')
 frame_left.place(x = -20,y = 0,height =400,width =200)
 Label(frame_left,image = img1,bg = '#ffffff').place(x=0,y=0,width =200,height =400)
@@ -119,23 +120,23 @@ name_password.place(x = 130 ,y =155, height = 35,width =200)
 
 
 #---------------------------------------***show password button***--------------------------------------------------------------
-img_scure = PhotoImage(file = '/home/reza/Desktop/images.png')
+img_scure = PhotoImage(file = getcwd() + '/my-vector' + '/images.png')
 secur_btn = Button(frame_right,image = img_scure,command =show,bg='#ffffff',highlightbackground='#ffffff',activebackground='#ffffff',borderwidth=0)
 secur_btn.place(x =331,y=155)
 
 
 #----------------------------------------***submit button***-------------------------------------------------------------
-img_submit = PhotoImage(file = '/home/reza/Desktop/submit.png')
+img_submit = PhotoImage(file = getcwd() + '/my-vector' + '/submit.png')
 btn = Button(frame_right,image =img_submit,activebackground='white',bg = '#ffffff',highlightbackground = 'white',borderwidth=0,command = add_info)
 btn.place(x = 24,y=220)
 
 #search button
-img_search = PhotoImage(file = '/home/reza/Desktop/5.png')
+img_search = PhotoImage(file = getcwd() + '/my-vector' + '/5.png')
 btn = Button(frame_right,image =img_search,activebackground='white',bg = '#ffffff',highlightbackground = 'white',borderwidth=0,command = search_passwords)
 btn.place(x = 300,y=220)
 
 #generate button
-img_generate = PhotoImage(file = '/home/reza/Desktop/4.png')
+img_generate = PhotoImage(file = getcwd() + '/my-vector' + '/4.png')
 btn = Button(frame_right,image =img_generate,activebackground='white',bg = '#ffffff',highlightbackground = 'white',borderwidth=0,command=pass_generator)
 btn.place(x = 160,y=220)
 

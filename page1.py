@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk
 import mysql.connector
 from mysql.connector.errors import Error
-
+from os import getcwd
 #---------------------------------------***database***--------------------------------------------------
 def mydatabase():
     global mydb
@@ -47,7 +47,7 @@ win = Tk()
 win.geometry('620x400')
 frame_left = Frame(win,bg = '#e7ff08')
 frame_left.place(x = -20 ,y = 0,height =400,width =200)
-img1 = PhotoImage(file = '/home/reza/Desktop/Untitled2.png')
+img1 = PhotoImage(file = getcwd() + '/my-vector' + '/Untitled2.png')
 Label(frame_left,image = img1,bg = '#ffffff').place(x=0,y=0,width =200,height =400)
 
 frame_right = Frame(win,bg = '#ffffff')
@@ -68,18 +68,18 @@ db_host = Entry(frame_right,fg='dodgerblue2',bg = '#ffffff',font='dyuthi 14',hig
 db_host.place(x = 130, y=155 , height =35, width =200)
 
 #---------------------------------------***show password button***--------------------------------------------------------------
-img_scure = PhotoImage(file = '/home/reza/Desktop/images.png')
+img_scure = PhotoImage(file = getcwd() + '/my-vector' + '/images.png')
 secur_btn = Button(frame_right,image = img_scure,command =show,bg='#ffffff',highlightbackground='#ffffff',activebackground='#ffffff',borderwidth=0)
 secur_btn.place(x =331,y=105)
 
 
 #next page button
-img_nextpg = PhotoImage(file = '/home/reza/Desktop/nextpage.png')
+img_nextpg = PhotoImage(file = getcwd() + '/my-vector' + '/nextpage.png')
 btn = Button(frame_right,image =img_nextpg,activebackground='white',bg = '#ffffff',highlightbackground = 'white',borderwidth=0,command =next_page)
 btn.place(x = 24,y=220)
 
 #connect button 
-img_connectpg = PhotoImage(file = '/home/reza/Desktop/connect.png')
+img_connectpg = PhotoImage(file = getcwd() + '/my-vector' + '/connect.png')
 btn = Button(frame_right,image =img_connectpg,activebackground='white',bg = '#ffffff',highlightbackground = 'white',borderwidth=0,command =mydatabase)
 btn.place(x = 300,y=220)
 
